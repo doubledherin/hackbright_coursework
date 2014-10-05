@@ -10,20 +10,28 @@ those files into the directory that their name starts with.
 
 import string, shutil, os, os.path
 
-current = os.getcwd()
-path_to_original = os.path.relpath("/original_files", current)
-print current
-print path_to_original
+for char in string.ascii_lowercase:
+	os.mkdir(char)
 
 os.chdir("./original_files/")
-newcurrent = os.getcwd()
-print newcurrent
+source = os.listdir("./")
 
-dirs = os.listdir("./")
-print dirs
+# remove hidden files from list of files
+for item in source:
+	if item[0] == "." or os.path.isdir(item):
+		source.remove(item)
+print "source is", source
 
-#for char in string.ascii_lowercase:
-#	os.mkdir(char)
+for filename in source:
+	print "filename is", filename
+	first_letter = filename[0]
+	print "first_letter is", first_letter
+
+	destination = os.path.abspath("../%s/" % first_letter)
+	print "destination is", destination
+
+	shutil.copy(filename, destination)
+
 
 
 
