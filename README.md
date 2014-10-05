@@ -1,22 +1,8 @@
 Project 1: Looping, file manipulation, panic
 =======
 
-Introduction
+Concepts required
 -------
-This exercise is difficult and should take several days.
-
-Resources:
-* http://learnpythonthehardway.org/book/ex32.html
-* http://learnpythonthehardway.org/book/ex34.html
-* http://www.learnpython.org/en/Lists
-* http://www.learnpython.org/en/Loops
-* http://www.learnpython.org/en/Basic_String_Operations
-* http://docs.python.org/library/os.html#os.listdir
-* http://docs.python.org/library/os.html#os.chdir
-* http://docs.python.org/library/os.path.html#os.path.exists
-* http://docs.python.org/library/shutil.html#shutil.move
-
-Concepts required:
 * for loops
 * conditionals
 * lists
