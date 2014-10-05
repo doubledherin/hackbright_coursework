@@ -1,4 +1,2 @@
-import string, os
+import string, os, shutil
 
-for char in string.ascii_lowercase:
-	print char
