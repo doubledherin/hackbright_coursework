@@ -13,23 +13,20 @@ import string, shutil, os, os.path
 for char in string.ascii_lowercase:
 	os.mkdir(char)
 
+# go into original files and collect filenames into 'source'
 os.chdir("./original_files/")
 source = os.listdir("./")
 
-# remove hidden files from list of files
+# remove hidden files from list of files 'source'
 for item in source:
 	if item[0] == "." or os.path.isdir(item):
 		source.remove(item)
-print "source is", source
 
+# determine first letter of filename and move it into the 
+# appropriate folder
 for filename in source:
-	print "filename is", filename
 	first_letter = filename[0]
-	print "first_letter is", first_letter
-
 	destination = os.path.abspath("../%s/" % first_letter)
-	print "destination is", destination
-
 	shutil.copy(filename, destination)
 
 
